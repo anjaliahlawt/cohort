@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>third way to send request</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+   <script>
+    //sending a get request using a fetch
+    async function getAnimaldata(){
+        const response=await fetch("https://fakerapi.it/api/v1/persons");
+        const finaldata=await response.json()
+        console.log(finaldata);
+    }
+   </script> 
+   <button onclick="getAnimaldata()">get animal data</button>
+</body>
+</html>
